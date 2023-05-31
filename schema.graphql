@@ -1,10 +1,22 @@
 type Query {
-  getEthByAddress: ETH_RESULT!
-  getTotalSupplyEth: ETH_RESULT!
+  getEthByAddress: ETH_ADDRESS!
+}
+
+type Query {
+  getTotalSupplyEth: TOTAL_ETH!
 }
 
 """
 List down all fields returned from the provided APIs
 """
-type ETH_RESULT {
+type ETH_ADDRESS {
+  status : String!
+  message : String!
+  result : Int!
+}
+
+type TOTAL_ETH {
+  status : String!
+  message : String!
+  result : Int!
 }
