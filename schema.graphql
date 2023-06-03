@@ -1,3 +1,5 @@
+scalar BigInt
+
 type Query {
   getEthByAddress: ETH_ADDRESS!
 }
@@ -11,12 +13,11 @@ List down all fields returned from the provided APIs
 """
 type ETH_ADDRESS {
   status : String!
-  message : String!
-  result : Int!
+  result : BigInt!
 }
 
 type TOTAL_ETH {
   status : String!
   message : String!
-  result : Int!
+  result : BigInt!
 }
